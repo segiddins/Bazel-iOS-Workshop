@@ -5,12 +5,29 @@
 # sh_test rules declare a target that is a _test_
 
 # sh_binary named exit_0 that will run exit_0.sh
-
+sh_binary(
+    name = "exit_0",
+    srcs = ["exit_0.sh"],
+)
 
 # sh_binary named exit_1 that will run exit_1.sh
-
+sh_binary(
+    name = "exit_1",
+    srcs = ["exit_1.sh"],
+)
 
 # sh_test named exit_0_test that will run exit_0_test.sh
-
+sh_test(
+    name = "exit_0_test",
+    size = "small",
+    srcs = ["exit_0_test.sh"],
+    data = [":exit_0"],
+)
 
 # sh_test named exit_1_test that will run exit_1_test.sh
+sh_test(
+    name = "exit_1_test",
+    size = "small",
+    srcs = ["exit_1_test.sh"],
+    data = [":exit_1"],
+)
