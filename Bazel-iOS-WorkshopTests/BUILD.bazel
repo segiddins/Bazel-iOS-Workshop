@@ -2,5 +2,24 @@ load("@build_bazel_rules_apple//apple:ios.bzl", "ios_unit_test")
 load("@build_bazel_rules_swift//swift:swift.bzl", "swift_library")
 
 # swift_library (https://github.com/bazelbuild/rules_swift/blob/master/doc/rules.md#swift_library) named SwiftLibrary
+swift_library(
+    name = "SwiftLibrary",
+    srcs = glob([
+        "*.swift",
+    ]),
+    tags = ["manual"],
+    deps = [
+        "//Bazel-iOS-Workshop:SwiftLibrary",
+    ],
+)
 
 # ios_unit_test (https://github.com/bazelbuild/rules_apple/blob/master/doc/rules-ios.md#ios_unit_test) named Bazel-iOS-WorkshopTests
+ios_unit_test(
+    name = "Bazel-iOS-WorkshopTests",
+    families = [
+        "iphone",
+        "ipad",
+    ],
+    minimum_os_version = "15.0",
+    deps = [":SwiftLibrary"],
+)
