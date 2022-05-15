@@ -1,0 +1,9 @@
+/bazel-Bazel-iOS-Workshop
+/bazel-bin
+/bazel-out
+/bazel-testlogs
+/bazel-bep.json
+/bazel-explain.txt
+
+.DS_STORE
+xcuserdata/
