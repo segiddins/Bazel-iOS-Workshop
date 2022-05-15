@@ -1,0 +1,16 @@
+# built-in bazel shell rules:
+# https://bazel.build/reference/be/shell
+
+# sh_binary rules declare a target that is _executable_
+# sh_test rules declare a target that is a _test_
+
+# sh_binary named exit_0 that will run exit_0.sh
+
+
+# sh_binary named exit_1 that will run exit_1.sh
+
+
+# sh_test named exit_0_test that will run exit_0_test.sh
+
+
+# sh_test named exit_1_test that will run exit_1_test.sh

@@ -1,0 +1,52 @@
+#!/bin/bash
+
+set -euo pipefail
+
+readonly REPO_DIR="$(cd "$(dirname "$(dirname "${BASH_SOURCE[0]}")")" >/dev/null 2>&1 && pwd)"
+
+FRAMEWORK_SEARCH_PATHS=
+
+setup_bazel_path() {
+    if [[ -e /opt/homebrew/bin/bazelisk ]]; then
+        bazel_path=/opt/homebrew/bin/bazelisk
+    elif [[ -e /usr/local/bin/bazelisk ]]; then
+        bazel_path=/usr/local/bin/bazelisk
+    fi
+
+    # If we still haven't set bazel_path yet, we must be at the outer level of this script and don't have
+    # bazelisk installed (but, we do assume that `brew` is available and will be able to install bazelisk).
+    if [[ -z "${bazel_path:-}" ]]; then
+        (set -x && brew install bazelisk)
+        bazel_path=$(command -v bazelisk)
+    fi
+}
+
+bazel_options=()
+passthrough_env=(
+    "BAZEL_IGNORE_SYSTEM_HEADERS_VERSIONS=1"
+    "BAZEL_USE_XCODE_TOOLCHAIN=1"
+    "CC=clang"
+    "PATH=/usr/bin:/bin"
+    "USER=${USER:-build}"
+)
+if [[ -n "${HOME:-}" ]]; then
+    passthrough_env+=("HOME=$HOME")
+fi
+if [[ -n "${TERM:-}" ]]; then
+    passthrough_env+=("TERM=$TERM")
+fi
+if [[ -n "${COLUMNS:-}" ]]; then
+    passthrough_env+=("COLUMNS=$COLUMNS")
+fi
+if [[ -n "${BAZELISK_SKIP_WRAPPER:-}" ]]; then
+    passthrough_env+=("BAZELISK_SKIP_WRAPPER=$BAZELISK_SKIP_WRAPPER")
+fi
+
+bazel_args=$@
+setup_bazel_path
+
+env -i \
+    "${passthrough_env[@]}" \
+    "${bazel_path}" \
+    ${bazel_options[@]-} \
+    "$@"
