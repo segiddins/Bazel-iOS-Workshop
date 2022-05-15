@@ -7,6 +7,7 @@
 
 import XCTest
 @testable import Bazel_iOS_Workshop
+@testable import SharedLibrary
 
 class Bazel_iOS_WorkshopTests: XCTestCase {
 
@@ -24,6 +25,11 @@ class Bazel_iOS_WorkshopTests: XCTestCase {
         // Any test you write for XCTest can be annotated as throws and async.
         // Mark your test throws to produce an unexpected failure when your test encounters an uncaught error.
         // Mark your test async to allow awaiting for asynchronous code to complete. Check the results with assertions afterwards.
+    }
+
+    func testSharedLibrary() throws {
+        XCTAssertTrue(returnsTrue())
+        XCTAssertFalse(returnsFalse())
     }
 
 }

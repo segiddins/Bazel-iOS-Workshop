@@ -16,24 +16,21 @@
 		C0B6D617281F95A500BE2541 /* Bazel_iOS_WorkshopTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = C0B6D616281F95A500BE2541 /* Bazel_iOS_WorkshopTests.swift */; };
 		C0B6D621281F95A500BE2541 /* Bazel_iOS_WorkshopUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = C0B6D620281F95A500BE2541 /* Bazel_iOS_WorkshopUITests.swift */; };
 		C0B6D623281F95A500BE2541 /* Bazel_iOS_WorkshopUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = C0B6D622281F95A500BE2541 /* Bazel_iOS_WorkshopUITestsLaunchTests.swift */; };
+		C0B6D6362831A90300BE2541 /* SharedLibrary.swift in Sources */ = {isa = PBXBuildFile; fileRef = C0B6D6352831A90300BE2541 /* SharedLibrary.swift */; };
+		C0B6D63D2831AA4700BE2541 /* libSharedLibrary.a in Frameworks */ = {isa = PBXBuildFile; fileRef = C0B6D6332831A90300BE2541 /* libSharedLibrary.a */; };
 /* End PBXBuildFile section */
 
-/* Begin PBXContainerItemProxy section */
-		C0B6D613281F95A500BE2541 /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = C0B6D5F4281F95A400BE2541 /* Project object */;
-			proxyType = 1;
-			remoteGlobalIDString = C0B6D5FB281F95A400BE2541;
-			remoteInfo = "Bazel-iOS-Workshop";
+/* Begin PBXCopyFilesBuildPhase section */
+		C0B6D6312831A90300BE2541 /* CopyFiles */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "include/$(PRODUCT_NAME)";
+			dstSubfolderSpec = 16;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
 		};
-		C0B6D61D281F95A500BE2541 /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = C0B6D5F4281F95A400BE2541 /* Project object */;
-			proxyType = 1;
-			remoteGlobalIDString = C0B6D5FB281F95A400BE2541;
-			remoteInfo = "Bazel-iOS-Workshop";
-		};
-/* End PBXContainerItemProxy section */
+/* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
 		C0B6D5FC281F95A400BE2541 /* Bazel-iOS-Workshop.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Bazel-iOS-Workshop.app"; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -49,6 +46,8 @@
 		C0B6D61C281F95A500BE2541 /* Bazel-iOS-WorkshopUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Bazel-iOS-WorkshopUITests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		C0B6D620281F95A500BE2541 /* Bazel_iOS_WorkshopUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Bazel_iOS_WorkshopUITests.swift; sourceTree = "<group>"; };
 		C0B6D622281F95A500BE2541 /* Bazel_iOS_WorkshopUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Bazel_iOS_WorkshopUITestsLaunchTests.swift; sourceTree = "<group>"; };
+		C0B6D6332831A90300BE2541 /* libSharedLibrary.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libSharedLibrary.a; sourceTree = BUILT_PRODUCTS_DIR; };
+		C0B6D6352831A90300BE2541 /* SharedLibrary.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SharedLibrary.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -56,6 +55,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				C0B6D63D2831AA4700BE2541 /* libSharedLibrary.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -73,6 +73,13 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		C0B6D6302831A90300BE2541 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
@@ -82,7 +89,9 @@
 				C0B6D5FE281F95A400BE2541 /* Bazel-iOS-Workshop */,
 				C0B6D615281F95A500BE2541 /* Bazel-iOS-WorkshopTests */,
 				C0B6D61F281F95A500BE2541 /* Bazel-iOS-WorkshopUITests */,
+				C0B6D6342831A90300BE2541 /* SharedLibrary */,
 				C0B6D5FD281F95A400BE2541 /* Products */,
+				C0B6D63C2831AA4700BE2541 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -92,6 +101,7 @@
 				C0B6D5FC281F95A400BE2541 /* Bazel-iOS-Workshop.app */,
 				C0B6D612281F95A500BE2541 /* Bazel-iOS-WorkshopTests.xctest */,
 				C0B6D61C281F95A500BE2541 /* Bazel-iOS-WorkshopUITests.xctest */,
+				C0B6D6332831A90300BE2541 /* libSharedLibrary.a */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -127,6 +137,21 @@
 			path = "Bazel-iOS-WorkshopUITests";
 			sourceTree = "<group>";
 		};
+		C0B6D6342831A90300BE2541 /* SharedLibrary */ = {
+			isa = PBXGroup;
+			children = (
+				C0B6D6352831A90300BE2541 /* SharedLibrary.swift */,
+			);
+			path = SharedLibrary;
+			sourceTree = "<group>";
+		};
+		C0B6D63C2831AA4700BE2541 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -158,7 +183,6 @@
 			buildRules = (
 			);
 			dependencies = (
-				C0B6D614281F95A500BE2541 /* PBXTargetDependency */,
 			);
 			name = "Bazel-iOS-WorkshopTests";
 			productName = "Bazel-iOS-WorkshopTests";
@@ -176,12 +200,28 @@
 			buildRules = (
 			);
 			dependencies = (
-				C0B6D61E281F95A500BE2541 /* PBXTargetDependency */,
 			);
 			name = "Bazel-iOS-WorkshopUITests";
 			productName = "Bazel-iOS-WorkshopUITests";
 			productReference = C0B6D61C281F95A500BE2541 /* Bazel-iOS-WorkshopUITests.xctest */;
 			productType = "com.apple.product-type.bundle.ui-testing";
+		};
+		C0B6D6322831A90300BE2541 /* SharedLibrary */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = C0B6D6392831A90300BE2541 /* Build configuration list for PBXNativeTarget "SharedLibrary" */;
+			buildPhases = (
+				C0B6D62F2831A90300BE2541 /* Sources */,
+				C0B6D6302831A90300BE2541 /* Frameworks */,
+				C0B6D6312831A90300BE2541 /* CopyFiles */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = SharedLibrary;
+			productName = SharedLibrary;
+			productReference = C0B6D6332831A90300BE2541 /* libSharedLibrary.a */;
+			productType = "com.apple.product-type.library.static";
 		};
 /* End PBXNativeTarget section */
 
@@ -204,6 +244,9 @@
 						CreatedOnToolsVersion = 13.3.1;
 						TestTargetID = C0B6D5FB281F95A400BE2541;
 					};
+					C0B6D6322831A90300BE2541 = {
+						CreatedOnToolsVersion = 13.3.1;
+					};
 				};
 			};
 			buildConfigurationList = C0B6D5F7281F95A400BE2541 /* Build configuration list for PBXProject "Bazel-iOS-Workshop" */;
@@ -222,6 +265,7 @@
 				C0B6D5FB281F95A400BE2541 /* Bazel-iOS-Workshop */,
 				C0B6D611281F95A500BE2541 /* Bazel-iOS-WorkshopTests */,
 				C0B6D61B281F95A500BE2541 /* Bazel-iOS-WorkshopUITests */,
+				C0B6D6322831A90300BE2541 /* SharedLibrary */,
 			);
 		};
 /* End PBXProject section */
@@ -281,20 +325,15 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		C0B6D62F2831A90300BE2541 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				C0B6D6362831A90300BE2541 /* SharedLibrary.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXSourcesBuildPhase section */
-
-/* Begin PBXTargetDependency section */
-		C0B6D614281F95A500BE2541 /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			target = C0B6D5FB281F95A400BE2541 /* Bazel-iOS-Workshop */;
-			targetProxy = C0B6D613281F95A500BE2541 /* PBXContainerItemProxy */;
-		};
-		C0B6D61E281F95A500BE2541 /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			target = C0B6D5FB281F95A400BE2541 /* Bazel-iOS-Workshop */;
-			targetProxy = C0B6D61D281F95A500BE2541 /* PBXContainerItemProxy */;
-		};
-/* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
 		C0B6D605281F95A400BE2541 /* Main.storyboard */ = {
@@ -558,6 +597,30 @@
 			};
 			name = Release;
 		};
+		C0B6D6372831A90300BE2541 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				OTHER_LDFLAGS = "-ObjC";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		C0B6D6382831A90300BE2541 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				OTHER_LDFLAGS = "-ObjC";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
@@ -593,6 +656,15 @@
 			buildConfigurations = (
 				C0B6D62D281F95A500BE2541 /* Debug */,
 				C0B6D62E281F95A500BE2541 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		C0B6D6392831A90300BE2541 /* Build configuration list for PBXNativeTarget "SharedLibrary" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				C0B6D6372831A90300BE2541 /* Debug */,
+				C0B6D6382831A90300BE2541 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
