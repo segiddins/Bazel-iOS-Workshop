@@ -1,0 +1,6 @@
+load("@build_bazel_rules_apple//apple:ios.bzl", "ios_ui_test")
+load("@build_bazel_rules_swift//swift:swift.bzl", "swift_library")
+
+# swift_library (https://github.com/bazelbuild/rules_swift/blob/master/doc/rules.md#swift_library) named SwiftLibrary
+
+# ios_ui_test (https://github.com/bazelbuild/rules_apple/blob/master/doc/rules-ios.md#ios_ui_test) named Bazel-iOS-WorkshopUITests

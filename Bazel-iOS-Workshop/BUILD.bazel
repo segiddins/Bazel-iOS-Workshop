@@ -1,0 +1,17 @@
+load("@build_bazel_rules_apple//apple:ios.bzl", "ios_application", "ios_build_test")
+load("@build_bazel_rules_swift//swift:swift.bzl", "swift_library")
+
+# swift_library (https://github.com/bazelbuild/rules_swift/blob/master/doc/rules.md#swift_library) named SwiftLibrary
+# that includes both swift srcs as well as xcasset / lproj data
+
+
+# ios_build_test (https://github.com/bazelbuild/rules_apple/blob/master/doc/rules-ios.md#ios_build_test) named SwiftLibrary_build
+# that tests that we can build SwiftLibrary as a standalone Swift module
+
+
+# ios_application (https://github.com/bazelbuild/rules_apple/blob/master/doc/rules-ios.md#ios_application) named App
+# that targets iOS 15.0 and specifies an Info.plist
+#
+# Links code from "deps" into an executable, collects and compiles resources
+# from "deps" and places them with the executable in an .app bundle, and then
+# outputs an .ipa with the bundle in its Payload directory.
