@@ -1,3 +1,12 @@
 load("@build_bazel_rules_swift//swift:swift.bzl", "swift_library")
 
 # swift_library (https://github.com/bazelbuild/rules_swift/blob/master/doc/rules.md#swift_library) named SharedLibrary
+swift_library(
+    name = "SharedLibrary",
+    srcs = glob([
+        "*.swift",
+    ]),
+    module_name = "SharedLibrary",
+    tags = ["manual"],
+    visibility = ["//visibility:public"],
+)
