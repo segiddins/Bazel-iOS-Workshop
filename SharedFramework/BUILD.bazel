@@ -1,0 +1,27 @@
+load("@build_bazel_rules_swift//swift:swift.bzl", "swift_library")
+load("@build_bazel_rules_apple//apple:ios.bzl", "ios_framework")
+
+# objc_library for the headers named SharedFramework_objc_headers
+
+# genrule allows us to generate a modulemap instead of checking one into the repo
+# notice things are starting to get hacky, at this point we'd want to be using something like
+# https://github.com/bazel-ios/rules_ios
+genrule(
+    name = "SharedFramework_modulemap",
+    outs = ["SharedFramework.modulemap"],
+    cmd = """
+printf "module SharedFramework {
+    export *
+    umbrella header \\\"../../../../SharedFramework/SharedFramework.h\\\"
+}
+" > $@
+    """,
+    executable = False,
+)
+
+# swift_library named SharedFramework_swift that depends on the SharedFramework_objc_headers target
+# and also properly wires up the modulemap generated in the genrule
+
+# objc_library named SharedFramework_library that depends on the _swift target & includes the .m srcs
+
+# ios_framework named SharedFramework that exposes a dynamic framework

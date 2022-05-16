@@ -6,7 +6,7 @@
 //
 
 import UIKit
-import SharedLibrary
+import SharedFramework
 
 @main
 class AppDelegate: UIResponder, UIApplicationDelegate {

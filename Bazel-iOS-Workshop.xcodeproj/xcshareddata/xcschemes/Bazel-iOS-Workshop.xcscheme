@@ -48,6 +48,16 @@
                ReferencedContainer = "container:Bazel-iOS-Workshop.xcodeproj">
             </BuildableReference>
          </TestableReference>
+         <TestableReference
+            skipped = "NO">
+            <BuildableReference
+               BuildableIdentifier = "primary"
+               BlueprintIdentifier = "C0B6D69B2831AEB900BE2541"
+               BuildableName = "SharedFrameworkTests.xctest"
+               BlueprintName = "SharedFrameworkTests"
+               ReferencedContainer = "container:Bazel-iOS-Workshop.xcodeproj">
+            </BuildableReference>
+         </TestableReference>
       </Testables>
    </TestAction>
    <LaunchAction

@@ -17,8 +17,54 @@
 		C0B6D621281F95A500BE2541 /* Bazel_iOS_WorkshopUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = C0B6D620281F95A500BE2541 /* Bazel_iOS_WorkshopUITests.swift */; };
 		C0B6D623281F95A500BE2541 /* Bazel_iOS_WorkshopUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = C0B6D622281F95A500BE2541 /* Bazel_iOS_WorkshopUITestsLaunchTests.swift */; };
 		C0B6D6362831A90300BE2541 /* SharedLibrary.swift in Sources */ = {isa = PBXBuildFile; fileRef = C0B6D6352831A90300BE2541 /* SharedLibrary.swift */; };
-		C0B6D63D2831AA4700BE2541 /* libSharedLibrary.a in Frameworks */ = {isa = PBXBuildFile; fileRef = C0B6D6332831A90300BE2541 /* libSharedLibrary.a */; };
+		C0B6D69D2831AEB900BE2541 /* SharedFramework.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C0B6D6952831AEB900BE2541 /* SharedFramework.framework */; };
+		C0B6D6A42831AEB900BE2541 /* SharedFrameworkTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = C0B6D6A32831AEB900BE2541 /* SharedFrameworkTests.swift */; };
+		C0B6D6A52831AEB900BE2541 /* SharedFramework.h in Headers */ = {isa = PBXBuildFile; fileRef = C0B6D6972831AEB900BE2541 /* SharedFramework.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		C0B6D6A82831AEB900BE2541 /* SharedFramework.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C0B6D6952831AEB900BE2541 /* SharedFramework.framework */; };
+		C0B6D6A92831AEB900BE2541 /* SharedFramework.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = C0B6D6952831AEB900BE2541 /* SharedFramework.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		C0B6D6B22831AED600BE2541 /* SharedFramework.swift in Sources */ = {isa = PBXBuildFile; fileRef = C0B6D6B12831AED600BE2541 /* SharedFramework.swift */; };
+		C0B6D6B32831AEE400BE2541 /* LegacyClass.m in Sources */ = {isa = PBXBuildFile; fileRef = C0B6D63F2831AB5800BE2541 /* LegacyClass.m */; };
+		C0B6D6B42831AEEA00BE2541 /* LegacyClass.h in Headers */ = {isa = PBXBuildFile; fileRef = C0B6D63E2831AB5800BE2541 /* LegacyClass.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		C0B6D6B92831BD3000BE2541 /* libSharedLibrary.a in Frameworks */ = {isa = PBXBuildFile; fileRef = C0B6D6332831A90300BE2541 /* libSharedLibrary.a */; };
 /* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		C0B6D69E2831AEB900BE2541 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = C0B6D5F4281F95A400BE2541 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = C0B6D6942831AEB900BE2541;
+			remoteInfo = SharedFramework;
+		};
+		C0B6D6A02831AEB900BE2541 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = C0B6D5F4281F95A400BE2541 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = C0B6D5FB281F95A400BE2541;
+			remoteInfo = "Bazel-iOS-Workshop";
+		};
+		C0B6D6A62831AEB900BE2541 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = C0B6D5F4281F95A400BE2541 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = C0B6D6942831AEB900BE2541;
+			remoteInfo = SharedFramework;
+		};
+		C0B6D6B52831B1D500BE2541 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = C0B6D5F4281F95A400BE2541 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = C0B6D5FB281F95A400BE2541;
+			remoteInfo = "Bazel-iOS-Workshop";
+		};
+		C0B6D6B72831B1DD00BE2541 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = C0B6D5F4281F95A400BE2541 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = C0B6D5FB281F95A400BE2541;
+			remoteInfo = "Bazel-iOS-Workshop";
+		};
+/* End PBXContainerItemProxy section */
 
 /* Begin PBXCopyFilesBuildPhase section */
 		C0B6D6312831A90300BE2541 /* CopyFiles */ = {
@@ -28,6 +74,17 @@
 			dstSubfolderSpec = 16;
 			files = (
 			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		C0B6D6AD2831AEB900BE2541 /* Embed Frameworks */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 10;
+			files = (
+				C0B6D6A92831AEB900BE2541 /* SharedFramework.framework in Embed Frameworks */,
+			);
+			name = "Embed Frameworks";
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXCopyFilesBuildPhase section */
@@ -48,6 +105,13 @@
 		C0B6D622281F95A500BE2541 /* Bazel_iOS_WorkshopUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Bazel_iOS_WorkshopUITestsLaunchTests.swift; sourceTree = "<group>"; };
 		C0B6D6332831A90300BE2541 /* libSharedLibrary.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libSharedLibrary.a; sourceTree = BUILT_PRODUCTS_DIR; };
 		C0B6D6352831A90300BE2541 /* SharedLibrary.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SharedLibrary.swift; sourceTree = "<group>"; };
+		C0B6D63E2831AB5800BE2541 /* LegacyClass.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = LegacyClass.h; sourceTree = "<group>"; };
+		C0B6D63F2831AB5800BE2541 /* LegacyClass.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = LegacyClass.m; sourceTree = "<group>"; };
+		C0B6D6952831AEB900BE2541 /* SharedFramework.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = SharedFramework.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		C0B6D6972831AEB900BE2541 /* SharedFramework.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SharedFramework.h; sourceTree = "<group>"; };
+		C0B6D69C2831AEB900BE2541 /* SharedFrameworkTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = SharedFrameworkTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		C0B6D6A32831AEB900BE2541 /* SharedFrameworkTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SharedFrameworkTests.swift; sourceTree = "<group>"; };
+		C0B6D6B12831AED600BE2541 /* SharedFramework.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SharedFramework.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -55,7 +119,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				C0B6D63D2831AA4700BE2541 /* libSharedLibrary.a in Frameworks */,
+				C0B6D6A82831AEB900BE2541 /* SharedFramework.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -63,6 +127,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				C0B6D6B92831BD3000BE2541 /* libSharedLibrary.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -80,6 +145,21 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		C0B6D6922831AEB900BE2541 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		C0B6D6992831AEB900BE2541 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				C0B6D69D2831AEB900BE2541 /* SharedFramework.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
@@ -90,6 +170,8 @@
 				C0B6D615281F95A500BE2541 /* Bazel-iOS-WorkshopTests */,
 				C0B6D61F281F95A500BE2541 /* Bazel-iOS-WorkshopUITests */,
 				C0B6D6342831A90300BE2541 /* SharedLibrary */,
+				C0B6D6962831AEB900BE2541 /* SharedFramework */,
+				C0B6D6A22831AEB900BE2541 /* SharedFrameworkTests */,
 				C0B6D5FD281F95A400BE2541 /* Products */,
 				C0B6D63C2831AA4700BE2541 /* Frameworks */,
 			);
@@ -102,6 +184,8 @@
 				C0B6D612281F95A500BE2541 /* Bazel-iOS-WorkshopTests.xctest */,
 				C0B6D61C281F95A500BE2541 /* Bazel-iOS-WorkshopUITests.xctest */,
 				C0B6D6332831A90300BE2541 /* libSharedLibrary.a */,
+				C0B6D6952831AEB900BE2541 /* SharedFramework.framework */,
+				C0B6D69C2831AEB900BE2541 /* SharedFrameworkTests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -152,7 +236,38 @@
 			name = Frameworks;
 			sourceTree = "<group>";
 		};
+		C0B6D6962831AEB900BE2541 /* SharedFramework */ = {
+			isa = PBXGroup;
+			children = (
+				C0B6D63E2831AB5800BE2541 /* LegacyClass.h */,
+				C0B6D63F2831AB5800BE2541 /* LegacyClass.m */,
+				C0B6D6972831AEB900BE2541 /* SharedFramework.h */,
+				C0B6D6B12831AED600BE2541 /* SharedFramework.swift */,
+			);
+			path = SharedFramework;
+			sourceTree = "<group>";
+		};
+		C0B6D6A22831AEB900BE2541 /* SharedFrameworkTests */ = {
+			isa = PBXGroup;
+			children = (
+				C0B6D6A32831AEB900BE2541 /* SharedFrameworkTests.swift */,
+			);
+			path = SharedFrameworkTests;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
+
+/* Begin PBXHeadersBuildPhase section */
+		C0B6D6902831AEB900BE2541 /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				C0B6D6B42831AEEA00BE2541 /* LegacyClass.h in Headers */,
+				C0B6D6A52831AEB900BE2541 /* SharedFramework.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXHeadersBuildPhase section */
 
 /* Begin PBXNativeTarget section */
 		C0B6D5FB281F95A400BE2541 /* Bazel-iOS-Workshop */ = {
@@ -162,10 +277,12 @@
 				C0B6D5F8281F95A400BE2541 /* Sources */,
 				C0B6D5F9281F95A400BE2541 /* Frameworks */,
 				C0B6D5FA281F95A400BE2541 /* Resources */,
+				C0B6D6AD2831AEB900BE2541 /* Embed Frameworks */,
 			);
 			buildRules = (
 			);
 			dependencies = (
+				C0B6D6A72831AEB900BE2541 /* PBXTargetDependency */,
 			);
 			name = "Bazel-iOS-Workshop";
 			productName = "Bazel-iOS-Workshop";
@@ -183,6 +300,7 @@
 			buildRules = (
 			);
 			dependencies = (
+				C0B6D6B62831B1D500BE2541 /* PBXTargetDependency */,
 			);
 			name = "Bazel-iOS-WorkshopTests";
 			productName = "Bazel-iOS-WorkshopTests";
@@ -200,6 +318,7 @@
 			buildRules = (
 			);
 			dependencies = (
+				C0B6D6B82831B1DD00BE2541 /* PBXTargetDependency */,
 			);
 			name = "Bazel-iOS-WorkshopUITests";
 			productName = "Bazel-iOS-WorkshopUITests";
@@ -222,6 +341,43 @@
 			productName = SharedLibrary;
 			productReference = C0B6D6332831A90300BE2541 /* libSharedLibrary.a */;
 			productType = "com.apple.product-type.library.static";
+		};
+		C0B6D6942831AEB900BE2541 /* SharedFramework */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = C0B6D6AA2831AEB900BE2541 /* Build configuration list for PBXNativeTarget "SharedFramework" */;
+			buildPhases = (
+				C0B6D6902831AEB900BE2541 /* Headers */,
+				C0B6D6912831AEB900BE2541 /* Sources */,
+				C0B6D6922831AEB900BE2541 /* Frameworks */,
+				C0B6D6932831AEB900BE2541 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = SharedFramework;
+			productName = SharedFramework;
+			productReference = C0B6D6952831AEB900BE2541 /* SharedFramework.framework */;
+			productType = "com.apple.product-type.framework";
+		};
+		C0B6D69B2831AEB900BE2541 /* SharedFrameworkTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = C0B6D6AE2831AEB900BE2541 /* Build configuration list for PBXNativeTarget "SharedFrameworkTests" */;
+			buildPhases = (
+				C0B6D6982831AEB900BE2541 /* Sources */,
+				C0B6D6992831AEB900BE2541 /* Frameworks */,
+				C0B6D69A2831AEB900BE2541 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				C0B6D69F2831AEB900BE2541 /* PBXTargetDependency */,
+				C0B6D6A12831AEB900BE2541 /* PBXTargetDependency */,
+			);
+			name = SharedFrameworkTests;
+			productName = SharedFrameworkTests;
+			productReference = C0B6D69C2831AEB900BE2541 /* SharedFrameworkTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
 		};
 /* End PBXNativeTarget section */
 
@@ -246,6 +402,15 @@
 					};
 					C0B6D6322831A90300BE2541 = {
 						CreatedOnToolsVersion = 13.3.1;
+						LastSwiftMigration = 1330;
+					};
+					C0B6D6942831AEB900BE2541 = {
+						CreatedOnToolsVersion = 13.3.1;
+						LastSwiftMigration = 1330;
+					};
+					C0B6D69B2831AEB900BE2541 = {
+						CreatedOnToolsVersion = 13.3.1;
+						TestTargetID = C0B6D5FB281F95A400BE2541;
 					};
 				};
 			};
@@ -266,6 +431,8 @@
 				C0B6D611281F95A500BE2541 /* Bazel-iOS-WorkshopTests */,
 				C0B6D61B281F95A500BE2541 /* Bazel-iOS-WorkshopUITests */,
 				C0B6D6322831A90300BE2541 /* SharedLibrary */,
+				C0B6D6942831AEB900BE2541 /* SharedFramework */,
+				C0B6D69B2831AEB900BE2541 /* SharedFrameworkTests */,
 			);
 		};
 /* End PBXProject section */
@@ -289,6 +456,20 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 		C0B6D61A281F95A500BE2541 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		C0B6D6932831AEB900BE2541 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		C0B6D69A2831AEB900BE2541 /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -333,7 +514,52 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		C0B6D6912831AEB900BE2541 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				C0B6D6B22831AED600BE2541 /* SharedFramework.swift in Sources */,
+				C0B6D6B32831AEE400BE2541 /* LegacyClass.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		C0B6D6982831AEB900BE2541 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				C0B6D6A42831AEB900BE2541 /* SharedFrameworkTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		C0B6D69F2831AEB900BE2541 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = C0B6D6942831AEB900BE2541 /* SharedFramework */;
+			targetProxy = C0B6D69E2831AEB900BE2541 /* PBXContainerItemProxy */;
+		};
+		C0B6D6A12831AEB900BE2541 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = C0B6D5FB281F95A400BE2541 /* Bazel-iOS-Workshop */;
+			targetProxy = C0B6D6A02831AEB900BE2541 /* PBXContainerItemProxy */;
+		};
+		C0B6D6A72831AEB900BE2541 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = C0B6D6942831AEB900BE2541 /* SharedFramework */;
+			targetProxy = C0B6D6A62831AEB900BE2541 /* PBXContainerItemProxy */;
+		};
+		C0B6D6B62831B1D500BE2541 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = C0B6D5FB281F95A400BE2541 /* Bazel-iOS-Workshop */;
+			targetProxy = C0B6D6B52831B1D500BE2541 /* PBXContainerItemProxy */;
+		};
+		C0B6D6B82831B1DD00BE2541 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = C0B6D5FB281F95A400BE2541 /* Bazel-iOS-Workshop */;
+			targetProxy = C0B6D6B72831B1DD00BE2541 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
 		C0B6D605281F95A400BE2541 /* Main.storyboard */ = {
@@ -472,6 +698,7 @@
 		C0B6D627281F95A500BE2541 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
@@ -500,6 +727,7 @@
 		C0B6D628281F95A500BE2541 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
@@ -600,10 +828,17 @@
 		C0B6D6372831A90300BE2541 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
 				OTHER_LDFLAGS = "-ObjC";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SKIP_INSTALL = YES;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
@@ -612,12 +847,115 @@
 		C0B6D6382831A90300BE2541 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
 				OTHER_LDFLAGS = "-ObjC";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SKIP_INSTALL = YES;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+		C0B6D6AB2831AEB900BE2541 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CLANG_ENABLE_MODULES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DEVELOPMENT_TEAM = FDGCLGAUQG;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_NSHumanReadableCopyright = "";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = me.segiddins.SharedFramework;
+				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
+				SKIP_INSTALL = YES;
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Debug;
+		};
+		C0B6D6AC2831AEB900BE2541 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CLANG_ENABLE_MODULES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DEVELOPMENT_TEAM = FDGCLGAUQG;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_NSHumanReadableCopyright = "";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = me.segiddins.SharedFramework;
+				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
+				SKIP_INSTALL = YES;
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Release;
+		};
+		C0B6D6AF2831AEB900BE2541 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				GENERATE_INFOPLIST_FILE = YES;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = me.segiddins.SharedFrameworkTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Bazel-iOS-Workshop.app/Bazel-iOS-Workshop";
+			};
+			name = Debug;
+		};
+		C0B6D6B02831AEB900BE2541 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				GENERATE_INFOPLIST_FILE = YES;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = me.segiddins.SharedFrameworkTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Bazel-iOS-Workshop.app/Bazel-iOS-Workshop";
 			};
 			name = Release;
 		};
@@ -665,6 +1003,24 @@
 			buildConfigurations = (
 				C0B6D6372831A90300BE2541 /* Debug */,
 				C0B6D6382831A90300BE2541 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		C0B6D6AA2831AEB900BE2541 /* Build configuration list for PBXNativeTarget "SharedFramework" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				C0B6D6AB2831AEB900BE2541 /* Debug */,
+				C0B6D6AC2831AEB900BE2541 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		C0B6D6AE2831AEB900BE2541 /* Build configuration list for PBXNativeTarget "SharedFrameworkTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				C0B6D6AF2831AEB900BE2541 /* Debug */,
+				C0B6D6B02831AEB900BE2541 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;

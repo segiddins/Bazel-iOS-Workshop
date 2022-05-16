@@ -8,9 +8,7 @@ swift_library(
         "*.swift",
     ]),
     tags = ["manual"],
-    deps = [
-        "//Bazel-iOS-Workshop:SwiftLibrary",
-    ],
+    deps = [],
 )
 
 # ios_ui_test (https://github.com/bazelbuild/rules_apple/blob/master/doc/rules-ios.md#ios_ui_test) named Bazel-iOS-WorkshopUITests
