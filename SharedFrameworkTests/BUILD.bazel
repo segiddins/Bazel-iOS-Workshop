@@ -3,5 +3,24 @@ load("@build_bazel_rules_swift//swift:swift.bzl", "swift_library")
 
 # swift_library (https://github.com/bazelbuild/rules_swift/blob/master/doc/rules.md#swift_library) named SwiftLibrary
 # that depends on the SharedFramework_library target
+swift_library(
+    name = "SwiftLibrary",
+    srcs = glob([
+        "*.swift",
+    ]),
+    tags = ["manual"],
+    deps = [
+        "//SharedFramework:SharedFramework_library",
+    ],
+)
 
 # ios_unit_test (https://github.com/bazelbuild/rules_apple/blob/master/doc/rules-ios.md#ios_unit_test) named SharedFrameworkTests
+ios_unit_test(
+    name = "SharedFrameworkTests",
+    families = [
+        "iphone",
+        "ipad",
+    ],
+    minimum_os_version = "15.0",
+    deps = [":SwiftLibrary"],
+)

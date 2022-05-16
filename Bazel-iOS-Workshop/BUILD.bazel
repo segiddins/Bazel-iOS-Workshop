@@ -15,7 +15,7 @@ swift_library(
     module_name = "Bazel_iOS_Workshop",
     tags = ["manual"],
     visibility = ["//visibility:public"],
-    deps = ["//SharedLibrary"],
+    deps = ["//SharedFramework"],
 )
 
 # ios_build_test (https://github.com/bazelbuild/rules_apple/blob/master/doc/rules-ios.md#ios_build_test) named SwiftLibrary_build
@@ -39,6 +39,7 @@ ios_application(
         "iphone",
         "ipad",
     ],
+    frameworks = ["//SharedFramework"],
     infoplists = [":Info.plist"],
     minimum_os_version = "15.0",
     visibility = ["//visibility:public"],

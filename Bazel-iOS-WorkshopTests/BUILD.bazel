@@ -10,6 +10,7 @@ swift_library(
     tags = ["manual"],
     deps = [
         "//Bazel-iOS-Workshop:SwiftLibrary",
+        "//SharedLibrary",
     ],
 )
 
@@ -20,6 +21,7 @@ ios_unit_test(
         "iphone",
         "ipad",
     ],
+    frameworks = ["//SharedFramework"],
     minimum_os_version = "15.0",
     deps = [":SwiftLibrary"],
 )

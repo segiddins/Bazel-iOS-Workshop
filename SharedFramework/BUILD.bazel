@@ -2,6 +2,11 @@ load("@build_bazel_rules_swift//swift:swift.bzl", "swift_library")
 load("@build_bazel_rules_apple//apple:ios.bzl", "ios_framework")
 
 # objc_library for the headers named SharedFramework_objc_headers
+objc_library(
+    name = "SharedFramework_objc_headers",
+    hdrs = glob(["*.h"]),
+    tags = ["manual"],
+)
 
 # genrule allows us to generate a modulemap instead of checking one into the repo
 # notice things are starting to get hacky, at this point we'd want to be using something like
@@ -21,7 +26,43 @@ printf "module SharedFramework {
 
 # swift_library named SharedFramework_swift that depends on the SharedFramework_objc_headers target
 # and also properly wires up the modulemap generated in the genrule
+swift_library(
+    name = "SharedFramework_swift",
+    srcs = glob([
+        "*.swift",
+    ]),
+    copts = [
+        "-Xcc",
+        "-fmodule-map-file=$(location :SharedFramework.modulemap)",
+        "-import-underlying-module",
+    ],
+    generated_header_name = "SharedFramework-Swift.h",
+    generates_header = True,
+    module_name = "SharedFramework",
+    swiftc_inputs = [":SharedFramework.modulemap"],
+    tags = ["manual"],
+    deps = ["SharedFramework_objc_headers"],
+)
 
 # objc_library named SharedFramework_library that depends on the _swift target & includes the .m srcs
+objc_library(
+    name = "SharedFramework_library",
+    srcs = glob(["*.m"]),
+    tags = ["manual"],
+    visibility = ["//SharedFrameworkTests:__subpackages__"],
+    deps = ["SharedFramework_swift"],
+)
 
 # ios_framework named SharedFramework that exposes a dynamic framework
+ios_framework(
+    name = "SharedFramework",
+    bundle_id = "me.segiddins.SharedFramework",
+    families = [
+        "iphone",
+        "ipad",
+    ],
+    infoplists = [":Info.plist"],
+    minimum_os_version = "15.0",
+    visibility = ["//visibility:public"],
+    deps = ["SharedFramework_library"],
+)
